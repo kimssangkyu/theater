@@ -1,0 +1,29 @@
+#content_section{
+	
+	width: 90%;
+	margin: 0 auto;
+}
+#input_component{
+	border: 1px solid #c3c3c3;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+}
+#registration_button, #modify_button{
+	border: 1px solid #c3c3c3;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+}
+.screen{
+	border: 1px solid #c3c3c3;
+	width: 18%;
+	padding: 20px;
+	vertical-align: middle;
+}
+#input_movie_synopsis{
+	width: 500px;
+	height: 300px;
+}

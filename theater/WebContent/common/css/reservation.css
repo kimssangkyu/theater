@@ -1,0 +1,76 @@
+#content_section{
+	
+	width: 90%;
+	margin: 0 auto;
+}
+.screen_seat_unit{
+	
+	border: 1px solid #c3c3c3;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 5px;
+	float: left;
+}
+.screen_seat_unit2{
+	
+	border: 1px solid #c3c3c3;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 5px;
+	background-color: #74c0e0;
+	float: left;
+}
+.screen_seat_unit3{
+	
+	border: 1px solid #c3c3c3;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 5px;
+	background-color: #74e095;
+	float: left;
+}
+.screen_seat_unit4{
+	
+	border: 1px solid #c3c3c3;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 5px;
+	background-color: #e074cd;
+	float: left;
+}
+#payment_button{
+	border: 1px solid #c3c3c3;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+}
+.payment{
+	border: 1px solid #c3c3c3;
+	width: 20%;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	padding : 10px;
+}
+#div_screen{
+	border: 1px solid #c3c3c3;
+	width: 297px;
+	padding: 10px;
+	text-align: center;
+	vertical-align: middle;
+	padding : 10px;
+}
+#screen_seat{
+	border: 1px solid #c3c3c3;
+	width: 320px;
+	padding: 10px;
+}
