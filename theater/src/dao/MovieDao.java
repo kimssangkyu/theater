@@ -504,4 +504,54 @@ public class MovieDao {
 			JdbcUtil.close(conn);
 		}
 	}
+	
+	/*
+	 * 현재 상영작 조회
+	 * */
+	public List<Movie> getMovieList(String date){
+		String sql = " Select * From movie Where movie_playdate <= ? And movie_enddate >= ? ";
+		List<Movie> movieList = new ArrayList<Movie>();
+		
+		try {
+			conn = ConnectionProvider.getConnection();
+			
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, date);
+			pstmt.setString(2, date);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()){
+				// 결과값 있으면 저장
+				Movie movie = new Movie();
+				
+				movie.setMovieCode(rs.getInt("movie_code"));
+				movie.setMovieName(rs.getString("movie_name"));
+				movie.setMovieRunningtime(rs.getInt("movie_runningtime"));
+				movie.setMovieSynopsis(rs.getString("movie_synopsis"));
+				movie.setMovieDirector(rs.getString("movie_director"));
+				movie.setMovieActor(rs.getString("movie_actor"));
+				movie.setMoviePlaydate(rs.getString("movie_playdate"));
+				movie.setMovieEnddate(rs.getString("movie_enddate"));
+				movie.setMoviePoster(rs.getString("movie_poster"));
+				movie.setMovieTrailer(rs.getString("movie_trailer"));
+				movie.setMovieAgeLimit(rs.getInt("movie_age_limit"));
+				movie.setMovieGenreCode(rs.getInt("movie_genre_code"));
+				movie.setMovieManufacturedCountryCode(rs.getInt("movie_manufactured_country_code"));
+				
+				movieList.add(movie);
+			}
+			
+		} catch (ClassNotFoundException | SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  finally {
+			JdbcUtil.close(rs);
+			JdbcUtil.close(pstmt);
+			JdbcUtil.close(conn);
+		}
+		
+		return movieList;
+	}
+	
 }
